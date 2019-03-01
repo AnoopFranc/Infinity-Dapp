@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Infinity</title>
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/scrolling-nav.css" rel="stylesheet">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+
+
+  </head>
+
+  <body id="page-top">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
+      <div class="container">
+        <a class="navbar-brand js-scroll-trigger"></a>
+        <a href="#page-top"><img src="./images/logo.png" alt="infinity" style="width: 37px" href="#page-top"></a>
+                  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#about">Buy A Ticket</a>
+            </li>
+            
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <header class="bg-primary text-white">
+      <div class="container text-center">
+        <h1 class="blinking">Welcome to Infinity</h1>
+        
+      </div>
+      
+    </header>
+
+    <section id="about">
+      <div class="container" >
+        <div class="row">
+          <div class="col-lg-8 mx-auto">
+            <h2>Buy A Ticket</h2>
+            <p class="lead">Each ticket is only 0.005 eth.At current prices, that's ~$<span id="ticketPrice"></span>.</p>
+            <div style="text-align:center;">
+              
+              <button onclick="myFunction()" class="btn btn-primary" id="buyTicket1" type="button">Ticket 1</button>
+              <button onclick="myFunction1()" class="btn btn-primary" id="buyTicket2" type="button">Ticket 2</button>
+              <button onclick="myFunction2()" class="btn btn-primary" id="buyTicket3" type="button">Ticket 3</button>
+              <button onclick="myFunction3()" class="btn btn-primary" id="buyTicket4" type="button">Ticket 4</button>
+              <button onclick="myFunction4()" class="btn btn-primary" id="buyTicket5" type="button">Ticket 5</button>
+            
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script>
+      function myFunction() {
+        document.getElementById('buyTicket1').innerHTML = "Ticket Bought";
+        document.getElementById('buyTicket1').disabled = true;
+      }
+      function myFunction1() {
+        document.getElementById('buyTicket2').innerHTML = "Ticket Bought";
+        document.getElementById('buyTicket2').disabled = true;
+      }
+      function myFunction2() {
+        document.getElementById('buyTicket3').innerHTML = "Ticket Bought";
+        document.getElementById('buyTicket3').disabled = true;
+      }
+      function myFunction3() {
+        document.getElementById('buyTicket4').innerHTML = "Ticket Bought";
+        document.getElementById('buyTicket4').disabled = true;
+      }
+      function myFunction4() {
+        document.getElementById('buyTicket5').innerHTML = "Ticket Bought";
+        document.getElementById('buyTicket5').disabled = true;
+      }
+   </script>
+
+    
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/web3.min.js"></script>
+    <script src="js/truffle-contract.js"></script>
+    <script src="js/app.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="js/jquery.easing.min.js"></script>
+
+    <!-- Custom JavaScript for this theme -->
+    <script src="js/scrolling-nav.js"></script>
+    <script src="js/ethprice.js"></script>
+
+  </body>
+
+</html>
