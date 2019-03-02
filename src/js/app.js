@@ -35,14 +35,17 @@ App = {
   },
 
   bindEvents: function() {
-    for(var i = 1; i <= 25; i++) {
+    for(var i = 1; i <= 5; i++) {
       $(document).on('click', '#buyTicket' + i, App.handleBuyTicket(i));
     }
+    $(document).on('click', '#getWinner', App.getWinnerAddress());
   },
 
   handleBuyTicket: function(ticketNumber) {
     function buyTicketNumber() {
+      console.log("iofnwieufsnseo");
       App.contracts.Lottery.deployed().then(function(instance) {
+        $('#buyTicket'+ticketNumber).prop("disabled", true);
         lottery = instance;
         var lotteryContractAddress = lottery.address;
         lottery.ticketPrice().then(function(ticketPrice){
@@ -52,14 +55,27 @@ App = {
             {
               from: web3.eth.coinbase,
               to: lotteryContractAddress,
-              value: 5000000000000000,
-              gas: 70000
+              value: 1500000000000000000,
+              gas: 200000
             });
         })
       })
     }
     return buyTicketNumber
   },
+
+  getWinnerAddress: function() {
+    console.log("Getting Winner address..");
+    App.contracts.Lottery.deployed().then(function(instance) {
+        lottery = instance;
+        return lottery.winnerAddress();
+    }).then(function(result) {
+      console.log("scene")
+      $('#WinnerText').text(result.toString());
+    }).catch(function(err) {
+      console.log(err.message);
+    });
+},
 
   getTicketPrice: function() {
     console.log('Getting ticket price...');

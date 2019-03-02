@@ -40,6 +40,8 @@
     <header class="bg-primary text-white">
       <div class="container text-center">
         <h1 class="blinking">Welcome to Infinity</h1>
+        <span>The winner is:</span>
+        <span id="Winner Text"></span>
         
       </div>
       
@@ -50,21 +52,21 @@
         <div class="row">
           <div class="col-lg-8 mx-auto">
             <h2>Buy A Ticket</h2>
-            <p class="lead">Each ticket is only 0.005 eth.At current prices, that's ~$<span id="ticketPrice"></span>.</p>
+            <p class="lead">Each ticket is only 0.015 eth.At current prices, that's ~$<span id="ticketPrice"></span>.</p>
             <div style="text-align:center;">
               
-              <button onclick="myFunction()" class="btn btn-primary" id="buyTicket1" type="button">Ticket 1</button>
-              <button onclick="myFunction1()" class="btn btn-primary" id="buyTicket2" type="button">Ticket 2</button>
-              <button onclick="myFunction2()" class="btn btn-primary" id="buyTicket3" type="button">Ticket 3</button>
-              <button onclick="myFunction3()" class="btn btn-primary" id="buyTicket4" type="button">Ticket 4</button>
-              <button onclick="myFunction4()" class="btn btn-primary" id="buyTicket5" type="button">Ticket 5</button>
-            
+              <button class="btn btn-primary" id="buyTicket1" type="button">Ticket 1</button>
+              <button class="btn btn-primary" id="buyTicket2" type="button">Ticket 2</button>
+              <button class="btn btn-primary" id="buyTicket3" type="button">Ticket 3</button>
+              <button class="btn btn-primary" id="buyTicket4" type="button">Ticket 4</button>
+              <button class="btn btn-primary" id="buyTicket5" type="button">Ticket 5</button>
+              <button class="btn btn-primary" id="getWinner" type="button">Get Winner</button>
             </div>
           </div>
         </div>
       </div>
     </section>
-    <script>
+    <!-- <script>
       function myFunction() {
         document.getElementById('buyTicket1').innerHTML = "Ticket Bought";
         document.getElementById('buyTicket1').disabled = true;
@@ -85,7 +87,7 @@
         document.getElementById('buyTicket5').innerHTML = "Ticket Bought";
         document.getElementById('buyTicket5').disabled = true;
       }
-   </script>
+   </script> -->
 
     
 

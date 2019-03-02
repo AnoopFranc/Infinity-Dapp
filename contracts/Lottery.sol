@@ -7,8 +7,9 @@ contract Lottery {
     event LotteryAmountPaid(address indexed _winner, uint64 _ticketID, uint256 _amount);
 
     
-    uint64 public ticketPrice = 5 finney;
+    uint64 public ticketPrice = 1500000000000000000 wei;
     uint64 public ticketMax = 5;
+    address winnerAddress;
 
 
     address[6] public ticketMapping;
@@ -51,10 +52,10 @@ contract Lottery {
 
         require(winner != address(0),"Winner cannot be an invalid address");
 
-
+        winnerAddress = winner; 
         reset();
         winner.transfer(totalAmount);
-
+        
         return winner;
     }
 
