@@ -9,7 +9,7 @@ contract Lottery {
     
     uint64 public ticketPrice = 1500000000000000000 wei;
     uint64 public ticketMax = 5;
-    address winnerAddress;
+    address public winnerAddress;
 
 
     address[6] public ticketMapping;

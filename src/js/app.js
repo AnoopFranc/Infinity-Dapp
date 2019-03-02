@@ -65,16 +65,19 @@ App = {
   },
 
   getWinnerAddress: function() {
+    function getWin() {
     console.log("Getting Winner address..");
     App.contracts.Lottery.deployed().then(function(instance) {
         lottery = instance;
         return lottery.winnerAddress();
     }).then(function(result) {
       console.log("scene")
-      $('#WinnerText').text(result.toString());
+      $('#WinnerText').text(result+"");
     }).catch(function(err) {
       console.log(err.message);
     });
+  }
+  return getWin
 },
 
   getTicketPrice: function() {
